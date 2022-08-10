@@ -1,54 +1,92 @@
-body {
+.container {
   margin: 0;
   padding: 0;
-  background-color: #ff1493;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
 }
 .side-bar {
-  padding: 20px;
-  width: 20vw;
-  height: 100vh;
-  background-color: #c71585;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  height: 100%;
+  background-color: rgba(0, 183, 255, 0.366);
   display: flex;
-  justify-content: start;
 }
-.hamburger-menu {
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-}
-.bar {
+.list {
+  width: 50%;
   height: 5px;
-  width: 35px;
-  background-color: #fff;
-  margin: 10px auto;
-  box-shadow: 5px 5px 50px 5px grey;
-}
-.hamburger-menu:hover .top {
-  transform: rotate(45deg) translateY(10px);
-  transition: 1s;
-}
-.hamburger-menu:hover .middle {
-  transform: rotate(-45deg) translateY(-10px);
-  transition: 1s;
-}
-.hamburger-menu:hover .bottom {
-  display: none;
-}
-.main {
-  opacity: 1;
+  margin: 40px;
   transform: translateX(0px);
-  transition: 1;
-  color: #fff;
+  transition: 0.5s;
+  opacity: 0;
 }
-.main > p:hover {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  width: 100%;
+.hamburger {
+  width: 65px;
+  height: 65px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
-.hamburger-menu:hover + .main {
+.top {
+  width: 35px;
+  height: 5px;
+  background-color:#fff;
+}
+.top:hover {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+.middle {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin-top: 20%;
+}
+.input:hover + .hamburger > .top {
+  margin-top: 20px;
+  transform: rotate(45deg) translateY(-6px);
+  transition: 0.5s;
+}
+.bottom {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin-top: 20%;
+}
+.input:hover + .hamburger > .bottom {
+  margin-top: -13px;
+  transform: rotate(-45deg) translateY(6px);
+  transition: 0.5s;
+}
+.input:hover + .hamburger > .middle {
+  display: none;
+  transition: 0.5s;
+}
+.input:checked + .hamburger + .list {
+  transform: translateX(20%);
   opacity: 1;
-  transform: translateX(100px);
-  transition: 1s;
-  display: flex;
-  flex-direction: column;
+}
+.input {
+  width: 65px;
+  height: 65px;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+.para1:hover {
+  width: 50%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white; 
+}
+.para2:hover {
+  width: 50%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.para3:hover {
+  width: 50%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
