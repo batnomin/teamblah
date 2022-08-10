@@ -35,18 +35,20 @@ body {
   display: none;
 }
 .main {
-  opacity: 0;
+  opacity: 1;
   transform: translateX(0px);
   transition: 1;
+  color: white;
 }
 .main > p:hover {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+  width: 100%;
 }
 .hamburger-menu:hover + .main {
   opacity: 1;
   transform: translateX(100px);
-  transition: 2s;
+  transition: 1s;
   display: flex;
   flex-direction: column;
 }
