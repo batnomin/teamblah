@@ -5,6 +5,9 @@
   height: 100vh;
   background-color: lightblue;
 }
+body{
+  background-color: lightblue;
+}
 .side-bar {
   margin: 0;
   padding: 0;
@@ -20,6 +23,7 @@
   transform: translateX(0px);
   transition: 0.5s;
   opacity: 0;
+  animation: list;
 }
 .hamburger {
   width: 65px;
@@ -42,7 +46,7 @@
   background-color: #fff;
   margin-top: 20%;
 }
-.input:hover + .hamburger > .top {
+.input:checked + .hamburger > .top {
   margin-top: 20px;
   transform: rotate(45deg) translateY(-6px);
   transition: 0.5s;
@@ -53,14 +57,22 @@
   background-color: white;
   margin-top: 20%;
 }
-.input:hover + .hamburger > .bottom {
+.input:checked + .hamburger > .bottom {
   margin-top: -13px;
   transform: rotate(-45deg) translateY(6px);
   transition: 0.5s;
 }
-.input:hover + .hamburger > .middle {
+.input:checked + .hamburger > .middle {
   display: none;
   transition: 0.5s;
+}
+.input:checked + .hamburger + .para1 {
+  transform: translateX(20%);
+  opacity: 1;
+}
+.input:checked + .hamburger + .para2 {
+  transform: translateX(20%);
+  opacity: 1;
 }
 .input:checked + .hamburger + .list {
   transform: translateX(20%);
@@ -75,18 +87,68 @@
   opacity: 0;
   z-index: 1;
 }
+.para1 {
+  width: 0% ;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: 1s;
+}
+.para2 {
+  width: 0% ;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+.para3 {
+  width: 0% ;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s;
+}
 .para1:hover {
   width: 50%;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white; 
+  border-color: white;
 }
 .para2:hover {
   width: 50%;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-color: white;
 }
 .para3:hover {
   width: 50%;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-color: white;
 }
+.arap1{
+  transform:translateX(20%) ;
+  transition: 0.5s;
+}
+.arap2{
+  transform:translateX(20%) ;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+.arap3{
+  transform:translateX(20%) ;
+  transition: 0.5s;
+  transition-delay: 2s;
+}
+/* @keyframes list {
+  0%{ 
+    background-color: grey;
+    transform: 10px;
+  }
+  25%{
+    background-color: gray;
+    transition: 20px;
+  }
+  50%{
+    background-color: azure;
+    transition: 30px;
+  }
+  75%{
+    background-color: #fff;
+    transition: 45px;
+  }
+  100%{
+    background-color: white;
+    transition: 60px;
+  } */
